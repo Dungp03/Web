@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour Đà Lạt Nha Trang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Chào mừng đến với Website Du Lịch</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Khám phá Đà Lạt - Nha Trang</h2>
+    <p>Chuyến đi tuyệt vời với hành trình 4 ngày 3 đêm</p>
+    <button>Đặt Tour Ngay</button>
+  </section>
+
+  <!-- Slider -->
+  <section class="slider">
+    <div class="slides" id="slides">
+      <img src="https://picsum.photos/id/1018/1000/400" alt="Slide 1">
+      <img src="https://picsum.photos/id/1015/1000/400" alt="Slide 2">
+      <img src="https://picsum.photos/id/1019/1000/400" alt="Slide 3">
+    </div>
+    <div class="slide-buttons" id="slide-buttons">
+      <button onclick="goToSlide(0)">1</button>
+      <button onclick="goToSlide(1)">2</button>
+      <button onclick="goToSlide(2)">3</button>
+    </div>
+  </section>
+
+  <!-- Thông tin tour -->
+  <section class="tour-info">
+    <h3>Tour: Đà Lạt - Nha Trang 4 ngày 3 đêm</h3>
+    <p><strong>Mã tour:</strong> <span class="code">TODALNHT4N3D-XEQK-528232</span></p>
+    <p><strong>Khởi hành:</strong> 31/08, 01/09, 02/09, Hàng ngày</p>
+    <p><strong>Phương tiện:</strong> 🚌</p>
+
+    <div class="services">
+      <h4>Dịch vụ kèm theo:</h4>
+      <ul>
+        <li>✔️ Bảo hiểm</li>
+        <li>🍽️ Bữa ăn</li>
+        <li>🎫 Vé tham quan</li>
+        <li>🚐 Xe đưa đón</li>
+        <li>🚩 Hướng dẫn viên</li>
+      </ul>
+    </div>
+
+    <div class="tour-desc">
+      <p><strong>Giới thiệu:</strong> Tour Đà Lạt Nha Trang 4 ngày 3 đêm hứa hẹn mang đến chuyến hành trình khám phá những địa danh nổi tiếng bậc nhất của hai thành phố du lịch hàng đầu Việt Nam như: <em>Thác Datanla, Green Hill, VinWonders Nha Trang, Vịnh San Hô, Bãi Tranh</em>,...</p>
+
+      <h4>🌟 ĐIỂM NỔI BẬT CỦA TOUR:</h4>
+      <ul>
+        <li>✅ Tham quan các di tích lịch sử nổi tiếng như: Tháp Bà Ponagar, Dinh Bảo Đại</li>
+        <li>✅ Trải nghiệm tắm bùn khoáng, tham quan chợ Đà Lạt</li>
+        <li>✅ Khách sạn tiện nghi, dịch vụ chất lượng cao</li>
+      </ul>
+    </div>
+  </section>
+
+  <button id="backToTop" onclick="scrollToTop()">⬆️ Về đầu trang</button>
+
+  <footer>
+    <p>© 2025 Du Lịch Việt - Đồng hành cùng bạn trên mọi hành trình</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementById('slides');
+    const buttons = document.getElementById('slide-buttons').children;
+    const totalSlides = slides.children.length;
+
+    function showSlides(index) {
+      slideIndex = (index + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active');
+      }
+      buttons[slideIndex].classList.add('active');
+    }
+
+    function goToSlide(index) {
+      showSlides(index);
+    }
+
+    setInterval(() => {
+      showSlides(slideIndex + 1);
+    }, 3000);
+
+    showSlides(0);
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
