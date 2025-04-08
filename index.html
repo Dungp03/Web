@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tour Đà Lạt Nha Trang</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Chào mừng đến với Website Du Lịch</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Trang chủ</a></li>
-        <li><a href="#">Giới thiệu</a></li>
-        <li><a href="#">Liên hệ</a></li>
-      </ul>
-    </nav>
+    <h1>Tour Đà Lạt - Nha Trang 4 ngày 3 đêm</h1>
   </header>
-
-  <section class="hero">
-    <h2>Khám phá Đà Lạt - Nha Trang</h2>
-    <p>Chuyến đi tuyệt vời với hành trình 4 ngày 3 đêm</p>
-    <button>Đặt Tour Ngay</button>
-  </section>
 
   <!-- Slider -->
   <section class="slider">
@@ -30,48 +18,45 @@
       <img src="https://picsum.photos/id/1015/1000/400" alt="Slide 2">
       <img src="https://picsum.photos/id/1019/1000/400" alt="Slide 3">
     </div>
-    <div class="slide-buttons" id="slide-buttons">
-      <button onclick="goToSlide(0)">1</button>
-      <button onclick="goToSlide(1)">2</button>
-      <button onclick="goToSlide(2)">3</button>
+    <div class="slide-dots" id="slide-buttons">
+      <button onclick="goToSlide(0)"></button>
+      <button onclick="goToSlide(1)"></button>
+      <button onclick="goToSlide(2)"></button>
     </div>
   </section>
 
   <!-- Thông tin tour -->
   <section class="tour-info">
-    <h3>Tour: Đà Lạt - Nha Trang 4 ngày 3 đêm</h3>
-    <p><strong>Mã tour:</strong> <span class="code">TODALNHT4N3D-XEQK-528232</span></p>
-    <p><strong>Khởi hành:</strong> 31/08, 01/09, 02/09, Hàng ngày</p>
+    <p><strong>Địa điểm:</strong> Đà Lạt</p>
+    <p><strong>Thời gian:</strong> 4 ngày 3 đêm</p>
     <p><strong>Phương tiện:</strong> 🚌</p>
+    <p><strong>Mã tour:</strong> <span class="code">TODA-LNHT4N3D-XEQK-528232</span></p>
+    <p><strong>Khởi hành:</strong> 31/08, 01/09, 02/09, Hàng ngày</p>
 
-    <div class="services">
-      <h4>Dịch vụ kèm theo:</h4>
-      <ul>
-        <li>✔️ Bảo hiểm</li>
-        <li>🍽️ Bữa ăn</li>
-        <li>🎫 Vé tham quan</li>
-        <li>🚐 Xe đưa đón</li>
-        <li>🚩 Hướng dẫn viên</li>
-      </ul>
-    </div>
+    <h3>Dịch vụ kèm theo</h3>
+    <ul>
+      <li>✔️ Bảo hiểm</li>
+      <li>🍽️ Bữa ăn</li>
+      <li>🎟️ Vé tham quan</li>
+      <li>🚐 Xe đưa đón</li>
+      <li>🏳️‍🌈 Hướng dẫn viên</li>
+    </ul>
 
-    <div class="tour-desc">
-      <p><strong>Giới thiệu:</strong> Tour Đà Lạt Nha Trang 4 ngày 3 đêm hứa hẹn mang đến chuyến hành trình khám phá những địa danh nổi tiếng bậc nhất của hai thành phố du lịch hàng đầu Việt Nam như: <em>Thác Datanla, Green Hill, VinWonders Nha Trang, Vịnh San Hô, Bãi Tranh</em>,...</p>
+    <h3>Giới thiệu tour</h3>
+    <p>
+      Tour Đà Lạt Nha Trang 4 ngày 3 đêm hứa hẹn mang đến chuyến hành trình khám phá
+      những địa danh nổi tiếng bậc nhất của hai thành phố du lịch hàng đầu Việt Nam như:
+      Thác Datanla, Green Hill, VinWonders Nha Trang, Vịnh San Hô, Bãi Tranh,...
+    </p>
 
-      <h4>🌟 ĐIỂM NỔI BẬT CỦA TOUR:</h4>
-      <ul>
-        <li>✅ Tham quan các di tích lịch sử nổi tiếng như: Tháp Bà Ponagar, Dinh Bảo Đại</li>
-        <li>✅ Trải nghiệm tắm bùn khoáng, tham quan chợ Đà Lạt</li>
-        <li>✅ Khách sạn tiện nghi, dịch vụ chất lượng cao</li>
-      </ul>
-    </div>
+    <h3 style="color: red;">*ĐIỂM NỔI BẬT CỦA TOUR:</h3>
+    <ul>
+      <li style="color: green;">✔️ Tham quan các di tích lịch sử nổi tiếng: Tháp Bà Ponagar, Dinh Bảo Đại</li>
+    </ul>
   </section>
 
-  <button id="backToTop" onclick="scrollToTop()">⬆️ Về đầu trang</button>
-
-  <footer>
-    <p>© 2025 Du Lịch Việt - Đồng hành cùng bạn trên mọi hành trình</p>
-  </footer>
+  <!-- Back to top -->
+  <button class="back-to-top" onclick="scrollToTop()">⬆ Về đầu trang</button>
 
   <script>
     let slideIndex = 0;
