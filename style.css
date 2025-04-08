@@ -1,163 +1,100 @@
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-    background: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    background: #f5f5f5;
 }
 
 header {
-    background: #0066cc;
+    background-color: #0066cc;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #ffcc00;
-}
-
-.hero {
-    background: url('https://picsum.photos/seed/picsum/1200/500') no-repeat center;
-    background-size: cover;
-    text-align: center;
-    padding: 80px 20px;
-    color: white;
-}
-
-.hero h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.hero button {
-    padding: 12px 28px;
-    font-size: 16px;
-    border: none;
-    background: #ff6600;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.hero button:hover {
-    background: #e65c00;
-}
-
-/* Slider */
 .slider {
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .slides {
     display: flex;
-    transition: transform 1s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slides img {
     width: 100%;
-    height: 350px;
+    height: auto;
+    flex-shrink: 0;
     object-fit: cover;
-    flex: 0 0 100%;
 }
 
-.slide-buttons {
+.slide-dots {
     text-align: center;
-    margin-top: 15px;
+    margin: 0;
+    padding: 0;
 }
 
-.slide-buttons button {
-    background: #ddd;
+
+
+.slide-dots button {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
     border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 50%;
+    margin: 0 6px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-.slide-buttons button:hover,
-.slide-buttons button.active {
+.slide-dots button.active,
+.slide-dots button:hover {
     background: #0066cc;
-    color: white;
 }
 
-/* Thông tin tour */
 .tour-info {
-    width: 90%;
-    max-width: 1000px;
-    margin: 40px auto;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
     background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.tour-info .code {
+.tour-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tour-info li {
+    margin-bottom: 8px;
+}
+
+.code {
     color: red;
     font-weight: bold;
 }
 
-.services ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 15px;
-    margin: 15px 0;
-    padding-left: 0;
-}
-
-.tour-desc ul {
-    padding-left: 20px;
-}
-
-#backToTop {
+.back-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    padding: 10px 16px;
     background: #0066cc;
     color: white;
     border: none;
-    border-radius: 50px;
-    cursor: pointer;
+    border-radius: 25px;
+    padding: 10px 18px;
     font-size: 14px;
+    cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
 }
 
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+.back-to-top:hover {
+    background: #004999;
 }
